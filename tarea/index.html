@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarea - Gestor de Tareas Interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+      }
+      form {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+      .error {
+        color: #c0392b;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 10px;
+        margin-bottom: 8px;
+        border-left: 4px solid #3498db;
+        border-radius: 4px;
+      }
+      li.completada {
+        text-decoration: line-through;
+        color: #7f8c8d;
+        border-left-color: #2ecc71;
+        background: #e8f8f5;
+      }
+      .acciones {
+        display: flex;
+        gap: 6px;
+      }
+      .btn-completar {
+        background: #2ecc71;
+      }
+      .btn-eliminar {
+        background: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mi Gestor de Tareas</h1>
+
+    <form id="formTarea">
+      <input
+        id="inputTarea"
+        type="text"
+        placeholder="Escribe una nueva tarea..."
+      />
+      <button type="submit">Agregar Tarea</button>
+    </form>
+    <p id="mensajeError" class="error"></p>
+
+    <ul id="listaTareas"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
